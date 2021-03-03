@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "path": "..\\FORMULARIO"
+    }
+  ],
+  "settings": {
+    "diffEditor.codeLens": true,
+    "scm.alwaysShowRepositories": true
+  }
+}
