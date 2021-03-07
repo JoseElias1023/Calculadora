@@ -3,8 +3,8 @@ const { truncate } = require('fs')
 
 function createWindow(){
   const ventana = new BrowserWindow({
-    width : 350,
-    height : 250,
+    width : 380,
+    height : 300,
     webPreferences: {
       nodeIntegration: true
     }

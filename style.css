@@ -13,9 +13,13 @@
 }
 
 body{
-  background-color: #dddddd;
+  background-color: #535353;
 }
+
 #numeroActual{
+  background-color: #fff;
+}
+#resultado{
   background-color: #fff;
 }
 
@@ -32,4 +36,10 @@ body{
   font-size: x-large;
   background-color: #0000ff;
   color: #fff;
+}
+
+.botonCalcB{
+  font-size: x-large;
+  background-color: #fff;
+  color: #dc2d22;
 }
