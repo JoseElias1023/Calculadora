@@ -35,6 +35,7 @@ var resultadoElemento = document.getElementById('resultado')
 
 var actual = ''
 var resultado = 0
+var resultado2 = 0
 
 function clickUno(){
   actual += 1
@@ -98,11 +99,23 @@ function clickSuma(){
 
 function clickResta(){
   if(actual != ''){
-    resultado -= parseInt(actual)
-    actual = ''
-    actualElemento.innerHTML = '0'
-    resultadoElemento.innerHTML = resultado
+    if(resultado > 0){
+      resultado2 += parseInt(actual)
+      resultado = resultado - resultado2
+      actual = ''
+      actualElemento.innerHTML = '0'
+      resultadoElemento.innerHTML = resultado
+      
+    }else{
+      resultado += parseInt(actual)
+      actual = ''
+      actualElemento.innerHTML = '0'
+      resultadoElemento.innerHTML = resultado
+      
+    }
+
   }
+    
 }
 
 function clickMult(){
