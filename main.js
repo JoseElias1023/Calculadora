@@ -1,10 +1,10 @@
-const {app, BroserWindow, BrowserWindow} = require('electron')
+const {app, BrowserWindow} = require('electron')
 const { truncate } = require('fs')
 
 function createWindow(){
   const ventana = new BrowserWindow({
-    width : 380,
-    height : 300,
+    width : 450,
+    height : 350,
     webPreferences: {
       nodeIntegration: true
     }

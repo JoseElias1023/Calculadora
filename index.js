@@ -13,7 +13,10 @@ mousetrap.bind('0',clickCero)
 mousetrap.bind('+',clickSuma)
 mousetrap.bind('-',clickResta)
 mousetrap.bind('x',clickMult)
+//mousetrap.bind('/',clickDivision)
 mousetrap.bind('C',clickBorrar)
+mousetrap.bind('=', clickIgual)
+
 
 document.getElementById('botonUno').addEventListener('click', clickUno)
 document.getElementById('botonDos').addEventListener('click', clickDos)
@@ -29,9 +32,12 @@ document.getElementById('suma').addEventListener('click', clickSuma)
 document.getElementById('resta').addEventListener('click', clickResta)
 document.getElementById('mult').addEventListener('click', clickMult)
 document.getElementById('borrar').addEventListener('click', clickBorrar)
+document.getElementById('botonIgual').addEventListener('click', clickIgual)
+
 
 var actualElemento = document.getElementById('numeroActual')
 var resultadoElemento = document.getElementById('resultado')
+
 
 var actual = ''
 var resultado = 0
@@ -88,7 +94,6 @@ function clickCero(){
 }
 
 function clickSuma(){
-  
   if(actual != ''){
     resultado += parseInt(actual)
     actual = ''
@@ -128,11 +133,26 @@ function clickMult(){
 }
 
 function clickBorrar(){
-  if(actual != '' || actual == ''){
+  
     resultado = 0
     actual = ''
     actualElemento.innerHTML = '0'
     resultadoElemento.innerHTML = resultado
-  }
+  
 }
+
+let history = document.getElementById('historial');
+
+function clickIgual(v){
+  
+    para = document.createElement('p');
+    data = actual + " + " +actual + " = " + eval(v);
+    para.innerText = data;
+    history.appendChild(para);
+    return eval(v);
+
+    clickBorrar
+ 
+}
+
 
